@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam Roach | Aspiring Business Student</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0e17',
+                        primary: '#00f3ff',
+                        secondary: '#0066ff',
+                        glass: 'rgba(255, 255, 255, 0.03)',
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark text-slate-200 font-sans selection:bg-primary selection:text-dark overflow-x-hidden relative">
+
+    <!-- Canvas Background -->
+    <canvas id="bg-canvas"
+        class="fixed top-0 left-0 w-full h-full -z-10 bg-gradient-to-br from-dark via-slate-900 to-black"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-heading font-black tracking-wider text-primary">LR</div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium uppercase tracking-widest text-slate-400">
+                <a href="#about" class="hover:text-primary transition-colors duration-300">About</a>
+                <a href="#highlights" class="hover:text-primary transition-colors duration-300">Highlights</a>
+                <a href="#projects" class="hover:text-primary transition-colors duration-300">Projects</a>
+                <a href="#impact" class="hover:text-primary transition-colors duration-300">Impact</a>
+                <a href="#community" class="hover:text-primary transition-colors duration-300">Community</a>
+                <a href="#contact" class="hover:text-primary transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6 tracking-tight opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.2s;">
+                <span class="text-gradient-animate">Hi, I'm Liam
+                    Roach</span>
+            </h1>
+            <h2 class="text-xl md:text-2xl text-secondary font-light mb-8 tracking-wide opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.4s;">
+                Aspiring Business Student & Entrepreneur
+            </h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-10 text-lg opacity-0 animate-fade-in-up"
+                style="animation-delay: 0.6s;">
+                Co-Founder of ACCESSENTIAL & Stravia Marketing | Business Student | Currently Building Hour One.
+            </p>
+            <div class="opacity-0 animate-fade-in-up" style="animation-delay: 0.8s;">
+                <a href="#highlights"
+                    class="inline-block px-8 py-4 border border-primary text-primary font-heading font-bold uppercase tracking-widest rounded-full hover:bg-primary hover:text-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,243,255,0.2)] hover:shadow-[0_0_40px_rgba(0,243,255,0.5)]">
+                    See My Journey
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Highlights Section -->
+    <section id="highlights" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold mb-4">Career Highlights</h2>
+                <div class="h-1 w-20 bg-primary mx-auto rounded-full shadow-[0_0_10px_var(--primary-blue)]"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Highlight Card 1 -->
+                <div
+                    class="glass p-8 rounded-2xl hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 group scroll-reveal">
+                    <h3
+                        class="font-heading text-3xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                        YES Regional Champion</h3>
+                    <p class="text-slate-400 mb-4">Manawatū-Whanganui Regional Champion & Company of the Year Finalist
+                        2025.</p>
+                </div>
+
+                <!-- Highlight Card 2 -->
+                <div
+                    class="glass p-8 rounded-2xl hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 group delay-100 scroll-reveal">
+                    <h3
+                        class="font-heading text-3xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                        2nd Place at EIA</h3>
+                    <p class="text-slate-400 mb-4">Young Enterprise Scheme "Entrepreneurship in Action" Financial Future
+                        Challenge.</p>
+                </div>
+
+                <!-- Highlight Card 3 -->
+                <div
+                    class="glass p-8 rounded-2xl hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 group scroll-reveal">
+                    <h3
+                        class="font-heading text-3xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                        University of Auckland</h3>
+                    <p class="text-slate-400 mb-4">Accepted for 2026 intake. Ready to start a new chapter in Business &
+                        Innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2025 Honors Section -->
+    <section id="honors" class="py-24 relative bg-primary/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12 scroll-reveal">
+                <div>
+                    <h2 class="font-heading text-4xl font-bold mb-2">2025 Prizegiving Accomplishments</h2>
+                    <p class="text-primary text-lg font-medium">Celebrating academic execution and leadership</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <i class="fa-solid fa-trophy text-6xl text-primary/20"></i>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Honor 1 -->
+                <div class="glass p-8 text-center scroll-reveal group">
+                    <div class="relative w-full h-48 mb-6 overflow-hidden rounded-xl">
+                        <img src="./assets/gallery/prizegiving2025.jpg" alt="Prizegiving Ceremony"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Top Academic Scholar</h3>
+                    <p class="text-slate-400 text-sm">Recognized for outstanding academic performance across all
+                        subjects.</p>
+                </div>
+
+                <!-- Honor 2 -->
+                <div class="glass p-8 text-center scroll-reveal delay-100 group">
+                    <div class="relative w-full h-48 mb-6 overflow-hidden rounded-xl">
+                        <img src="./assets/gallery/prizegiving-2.jpg" alt="Award Presentation"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Service & Leadership</h3>
+                    <p class="text-slate-400 text-sm">Awarded for significant contributions to the college community and
+                        student council.</p>
+                </div>
+
+                <!-- Honor 3 -->
+                <div class="glass p-8 text-center scroll-reveal delay-200 group">
+                    <div class="relative w-full h-48 mb-6 overflow-hidden rounded-xl">
+                        <img src="./assets/gallery/prizegiving-3.jpg" alt="Special Award"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Special Distinction</h3>
+                    <p class="text-slate-400 text-sm">Honored for exceptional dedication and excellence in 2025.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 relative bg-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12 scroll-reveal">
+                <h2 class="font-heading text-4xl font-bold">Featured Projects</h2>
+                <div class="text-slate-400 mt-4 md:mt-0 max-w-md text-right">
+                    Creative initiatives and leadership roles where I brought ideas to life.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project Card 1: Te Whero Times -->
+                <div
+                    class="glass p-10 rounded-2xl relative overflow-hidden group hover:bg-white/10 transition-colors scroll-reveal">
+                    <!-- Background Logo Watermark -->
+                    <img src="./assets/tewherotimes-logo.png" alt="Te Whero Times Logo"
+                        class="absolute -right-12 -bottom-4 w-80 opacity-10 group-hover:opacity-20 transition-all duration-500 -rotate-12 grayscale group-hover:grayscale-0">
+
+                    <div class="relative z-10">
+                        <div class="text-primary text-sm font-bold uppercase tracking-widest mb-2">Web Design & Media
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-4">Te Whero Times</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6">
+                            Web Designer for Horowhenua College's student-led newspaper.
+                            Built a digital platform to amplify student voices and keep the college community connected.
+                        </p>
+
+                        <!-- Visit Site Button -->
+                        <a href="https://projectspace.nz/csfpqbvu/tewherotimes/index.php" target="_blank"
+                            class="inline-flex items-center gap-2 px-6 py-3 border border-primary/50 text-primary font-bold uppercase tracking-widest text-xs rounded-full hover:bg-primary hover:text-dark transition-all duration-300 mb-6">
+                            Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <ul class="text-sm text-slate-500 flex gap-4">
+                            <li>#WebDesign</li>
+                            <li>#StudentMedia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Green Week -->
+                <div
+                    class="glass p-10 rounded-2xl relative overflow-hidden group hover:bg-white/10 transition-colors scroll-reveal delay-100">
+                    <!-- Background Image -->
+                    <img src="./assets/green-week-bg.jpg" alt="Green Week Presentation"
+                        class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition-all duration-700 group-hover:scale-105">
+
+                    <div class="relative z-10">
+                        <div class="text-primary text-sm font-bold uppercase tracking-widest mb-2">Sustainability &
+                            Events</div>
+                        <h3 class="text-3xl font-bold text-white mb-4">Green Week</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6">
+                            Organizer of an environmental awareness week at Horowhenua College.
+                            Led initiatives to promote sustainability and eco-friendly practices among students.
+                        </p>
+
+                        <div class="flex gap-8 mb-6 border-t border-white/5 pt-4">
+                            <div>
+                                <div class="text-2xl font-bold text-white">1,700+</div>
+                                <div class="text-xs text-slate-400 uppercase tracking-widest">Participants</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-white">$2,000</div>
+                                <div class="text-xs text-slate-400 uppercase tracking-widest">In Prizes</div>
+                            </div>
+                        </div>
+
+                        <ul class="text-sm text-slate-500 flex gap-4">
+                            <li>#Sustainability</li>
+                            <li>#EventManagement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-heading text-4xl font-bold text-center mb-16 scroll-reveal">Visualizing Impact</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
+                <div
+                    class="p-10 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 scroll-reveal">
+                    <div
+                        class="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-primary to-blue-600 mb-4 huge-number leading-tight">
+                        $400k+
+                    </div>
+                    <p class="text-xl font-bold text-white mb-2">Saved for R.A.D Levin</p>
+                    <p class="text-slate-500 text-sm">Founder of the club at Horowhenua College.</p>
+                </div>
+
+                <div
+                    class="p-10 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 delay-100 scroll-reveal">
+                    <div
+                        class="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-primary to-blue-600 mb-4 huge-number leading-tight">
+                        $5,000+
+                    </div>
+                    <p class="text-xl font-bold text-white mb-2">Fundraised</p>
+                    <p class="text-slate-500 text-sm">Through student council activities & charity events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Sport Section -->
+    <section id="community" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12 scroll-reveal">
+                <h2 class="font-heading text-4xl font-bold">Community & Leadership</h2>
+                <div class="text-slate-400 mt-4 md:mt-0 max-w-md text-right">
+                    Dedicated to serving my community, leading initiatives, and mentoring the next generation.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Sport/Tennis -->
+                <div class="glass p-8 rounded-2xl relative overflow-hidden group scroll-reveal">
+                    <i
+                        class="fa-solid fa-table-tennis-paddle-ball text-9xl absolute -right-10 -bottom-10 text-white/5 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="text-primary text-xl mb-4"><i class="fa-solid fa-medal"></i> Sports</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Tennis Coaching</h3>
+                    <ul class="text-slate-400 space-y-2">
+                        <li>• Coach at Levin Tennis Club</li>
+                        <li>• Coached multiple regionally competitive players</li>
+                        <li>• Fostering discipline & sportsmanship</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Model EU -->
+                <div class="glass p-8 rounded-2xl relative overflow-hidden group scroll-reveal delay-100">
+                    <i
+                        class="fa-solid fa-earth-americas text-9xl absolute -right-10 -bottom-10 text-white/5 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="text-primary text-xl mb-4"><i class="fa-solid fa-landmark"></i> Civics</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Model EU Scholarship</h3>
+                    <ul class="text-slate-400 space-y-2">
+                        <li>• 2023 Scholarship Winner</li>
+                        <li>• European Union Delegation</li>
+                        <li>• Negotiating global issues & policy</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Youth Voice -->
+                <div class="glass p-8 rounded-2xl relative overflow-hidden group scroll-reveal delay-200">
+                    <i
+                        class="fa-solid fa-bullhorn text-9xl absolute -right-10 -bottom-10 text-white/5 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="text-primary text-xl mb-4"><i class="fa-solid fa-users"></i> Advocacy</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Horowhenua Youth Voice</h3>
+                    <ul class="text-slate-400 space-y-2">
+                        <li>• 10M+ Views & 20k+ Followers</li>
+                        <li>• 2 Successful Council Submissions</li>
+                        <li>• Representing youth at District Council</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="py-24 relative bg-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12 scroll-reveal">
+                <h2 class="font-heading text-4xl font-bold">Life & Work</h2>
+                <div class="text-slate-400 mt-4 md:mt-0 max-w-md text-right">
+                    Snapshots of my journey, from the tennis court to the boardroom.
+                </div>
+            </div>
+
+            <!-- Dynamic Grid Container -->
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[300px]">
+                <!-- Images will be injected here by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & About -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6 scroll-reveal">
+
+            <!-- Bio Quote -->
+            <div class="text-center mb-16">
+                <i class="fa-solid fa-quote-left text-4xl text-primary/50 mb-6"></i>
+                <p class="text-2xl md:text-3xl font-light text-white leading-relaxed mb-6">
+                    "I am a hardworking student who strives for positive relationships with others. I pride myself on a
+                    strong work ethic and my drive to succeed in all I do."
+                </p>
+            </div>
+
+            <!-- Experience Box -->
+            <div class="glass p-8 rounded-2xl mt-12 text-left max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-white text-center">Experience</h2>
+
+                <div class="relative border-l-2 border-white/10 pl-8 ml-2 space-y-12">
+
+                    <!-- Hour One -->
+                    <div class="relative group">
+                        <div
+                            class="absolute -left-[41px] top-2 w-5 h-5 rounded-full border-4 border-primary bg-dark group-hover:bg-primary transition-colors">
+                        </div>
+                        <div class="mb-1">
+                            <span class="text-primary font-bold uppercase tracking-wider text-sm">Present</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Founder of Hour One</h4>
+                        <p class="text-slate-400 mt-2 text-lg">
+                            Currently building a fitness based alarm app helping people dominate the first hour of the
+                            day.
+                        </p>
+                    </div>
+
+                    <!-- Accessential -->
+                    <div class="relative group">
+                        <div
+                            class="absolute -left-[41px] top-2 w-5 h-5 rounded-full border-4 border-primary bg-dark group-hover:bg-primary transition-colors">
+                        </div>
+                        <div class="mb-1">
+                            <span class="text-primary font-bold uppercase tracking-wider text-sm">March 2025 -
+                                Present</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Co-Founder of ACCESSENTIAL</h4>
+                        <p class="text-slate-400 mt-2">
+                            Navigated patents, liability insurance, and worked alongside my team to create a product and
+                            business that discussed nationwide contracts with major companies.
+                        </p>
+                    </div>
+
+                    <!-- BOT -->
+                    <div class="relative group">
+                        <div
+                            class="absolute -left-[41px] top-2 w-5 h-5 rounded-full border-4 border-primary bg-dark group-hover:bg-primary transition-colors">
+                        </div>
+                        <div class="mb-1">
+                            <span class="text-primary font-bold uppercase tracking-wider text-sm">Oct 2024 - Oct
+                                2025</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Student Representative</h4>
+                        <p class="text-slate-400 mt-2">
+                            Board of Trustees at Horowhenua College. Ensured student voices were heard at the highest
+                            level of governance.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-12 border-t border-white/5 bg-black/40 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-heading text-2xl font-bold text-white mb-8">Get In Touch</h2>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
+                <a href="mailto:shurikenninja01business@gmail.com"
+                    class="flex items-center gap-3 text-lg hover:text-primary transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    shurikenninja01business@gmail.com
+                </a>
+                <a href="tel:0210740675" class="flex items-center gap-3 text-lg hover:text-primary transition-colors">
+                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    021 074 0675
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.instagram.com/liam_roach_/" target="_blank"
+                    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-xl text-white hover:bg-primary hover:text-dark hover:border-primary transition-all duration-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/liam.roach.201078/" target="_blank"
+                    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-xl text-white hover:bg-primary hover:text-dark hover:border-primary transition-all duration-300">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/liam-roach-871032327/" target="_blank"
+                    class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-xl text-white hover:bg-primary hover:text-dark hover:border-primary transition-all duration-300">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="text-slate-500 text-sm">
+                &copy; 2026 Liam Roach. Innovating the Future.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
