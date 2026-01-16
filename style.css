@@ -6,6 +6,39 @@ html {
 
 body {
   background-color: #0a0e17;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Mobile Optimizations */
+* {
+  max-width: 100%;
+}
+
+/* Ensure proper word breaking for long text */
+.break-words {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+
+  a,
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Reduce hero text size on small screens */
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  /* Ensure cards have proper padding */
+  .glass {
+    padding: 1.5rem !important;
+  }
 }
 
 /* Custom Scrollbar */
@@ -224,4 +257,54 @@ body {
 
 .glass.spotlight-card:hover::after {
   opacity: 1;
+}
+
+/* Profile Photo Styles */
+.profile-photo-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+}
+
+.profile-photo-container::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(45deg, #00f3ff, #0066ff, #00f3ff);
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotate-border 3s linear infinite;
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0a0e17;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo-container:hover .profile-photo {
+  transform: scale(1.05);
+}
+
+/* Responsive profile photo */
+@media (max-width: 768px) {
+  .profile-photo-container {
+    width: 150px;
+    height: 150px;
+  }
 }
